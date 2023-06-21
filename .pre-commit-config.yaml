@@ -1,0 +1,56 @@
+exclude: 'docs|node_modules|migrations|.git'
+fail_fast: true
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    # add supported hooks https://pre-commit.com/hooks.html
+      - id: check-added-large-files
+        # args: ['--maxkb=XXXX']
+      - id: check-ast
+      - id: check-case-conflict
+      # - id: check-docstring-first
+      - id: check-executables-have-shebangs
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-toml
+        exclude: poetry\.lock
+      - id: check-yaml
+      - id: debug-statements
+      # - id: detect-aws-credentials
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: requirements-txt-fixer
+      - id: trailing-whitespace
+        files: (^|/)a/.+\.(py|html|sh|css|js)$
+
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.0.273
+    hooks:
+    - id: ruff
+      args: [ --fix, --exit-non-zero-on-fix ]
+
+  - repo: https://github.com/psf/black
+    rev: 23.3.0
+    hooks:
+    - id: black
+      name: black
+      exclude: ^.*\b(migrations)\b.*$
+
+  - repo: https://github.com/Riverside-Healthcare/djLint
+    rev: v1.31.0
+    hooks:
+    - id: djlint-reformat-django
+    - id: djlint-django
+
+  - repo: https://github.com/python-poetry/poetry
+    rev: 1.5.0
+    hooks:
+      - id: poetry-check
+      - id: poetry-lock
+      - id: poetry-export
+        args: ["-f", "requirements.txt"]
+      # - id: poetry-export
+      # args: ["--with", "dev", "-o", "requirements-dev.txt"]

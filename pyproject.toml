@@ -1,0 +1,184 @@
+[tool.poetry]
+name = "pixshare"
+version = "0.1.0"
+description = "A Django web application for users to bookmark and share images"
+authors = [
+    "Kevin Bowen <kevin.bowen@gmail.com>"
+]
+maintainers = [
+]
+license = "MIT"
+readme = "README.md"
+
+homepage = ""
+repository = "https://github.com/kevinbowen777/pixshare.git"
+documentation = "file: README.rst"
+
+keywords = ["django", "web-application", "template"]
+
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "^4.2.2"
+django-extensions = "^3.2.3"
+environs = {extras = ["django"], version = "^9.5.0"}
+psycopg2-binary = "^2.9.5"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+ruff = "^0.0.273"
+pre-commit = "^3.3.3"
+nox = "^2023.4.22"
+safety = "2.4.0b1"
+django-debug-toolbar = "^4.1.0"
+djlint = "^1.31.0"
+coverage = { version = "^7.0.0", extras = ["toml"] }
+django-coverage-plugin = "^3.0.0"
+pytest = "^7.3.2"
+pytest-cov = "^4.1.0"
+pytest-django = "^4.5.2"
+Sphinx = "6.2.1"
+sphinx-rtd-theme = "^1.2.0"
+
+[tool.black]
+line-length = 88
+# include = [
+#]
+exclude = '''
+/(
+    \.git
+  | __pycache__
+  | .pytest_cache
+  | .venv
+  | staticfiles
+  | build
+  | dist
+  | ^.*\b(migrations)\b.*$
+)/
+'''
+
+[tool.coverage.paths]
+source = ["accounts", "config", "pages"]
+
+[tool.coverage.run]
+branch = true
+source = ["config"]
+omit = [
+    "*conftest.py",
+    "*manage.py",
+    "*settings*.py",
+    "*test.py",
+    "*wsgi.py",
+    "*/__init__.py",
+    "*/migrations/*",
+    "*/factories.py",
+    "*/tests/*",
+]
+plugins = [
+    "django_coverage_plugin",
+]
+
+[tool.coverage.django_coverage_plugin]
+template_extensions = "html, txt, tex, email"
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.djlint]
+files=["templates/"]
+indent=2
+preserve_blank_lines=true
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+filterwarnings = [
+    # "ignore::django.utils.deprecation.RemovedInDjango50Warning",
+]
+
+[tool.ruff]
+select = [
+    "B",    # flake8-bugbear
+    "C90",  # mccabe
+    "DJ",   # flake8-django
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "I",    # isort
+    "S",    # flake8-bandit
+    "W",    # pycodestyle warnings
+    # "RUF",  # ruff checks
+]
+ignore = [
+    "E501",    # line too long ({width} > {limit} characters)
+    # "E203",  # slice notation whitespace (not currently supported)
+    "E402",    # module level import not at top of file
+    "E722",    # do not use bare except
+    # "W503",  # (not currently supported)
+    "ERA",     # do not autoremove commented out code
+]
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
+unfixable = []
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".nox",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    "__pycache__",
+    "__pypackages__",
+    "htmlcov",
+    "migrations",
+    "_build",
+    "build",
+    "dist",
+    "images",
+    "media",
+    "node_modules",
+    "venv",
+]
+
+# Same as Black.
+line-length = 88
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Assume Python 3.11.
+# target-version = "py311"
+
+[tool.ruff.per-file-ignores]
+# "accounts/tests/factories.py" = ["BLK100"] (Not supported)
+# "accounts/tests/*" = ["BLK100"] (Not supported)
+"accounts/tests/*" = ["S101", "S106"]
+"config/test.py" = ["S101", "S106"]
+"pages/tests/*" = ["S101", "S106"]
+
+[tool.ruff.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
