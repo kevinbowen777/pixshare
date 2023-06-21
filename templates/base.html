@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Django, image sharing" />
+    <meta name="description" content="Image sharing web app built with Django" />
+    <title>
+      {% block title %}
+      {% endblock title %}
+    </title>
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header">
+      <span class="logo">Bookmarks</span>
+    </div>
+    <div id="content">
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </body>
+</html>
