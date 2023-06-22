@@ -127,6 +127,8 @@ LOGIN_REDIRECT_URL = "dashboard"
 LOGIN_URL = "login"
 LOGOUT_URL = "logout"
 
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
 # django-debug-toolbar
 # Note: disable when running Nox tests
 # Use the following in Docker only:
