@@ -14,7 +14,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 
 DEBUG = env.bool("DJANGO_DEBUG", default=False)
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["pixshare.com", "localhost", "127.0.0.1"]
 
 # Application definition
 
@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     # Third-party applications
     # "debug_toolbar",
     "django_extensions",
+    "social_django",
 ]
 
 MIDDLEWARE = [
