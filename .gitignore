@@ -7,6 +7,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Self-signed key certs
+cert.key
+cert.crt
+
 # C extensions
 *.so
 
