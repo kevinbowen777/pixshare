@@ -142,7 +142,11 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
     "accounts.authentication.EmailAuthBackend",
+    "social_core.backends.github.GithubOAuth2",
 ]
+
+SOCIAL_AUTH_GITHUB_KEY = env.str("SOCIAL_AUTH_GITHUB_KEY")
+SOCIAL_AUTH_GITHUB_SECRET = env.str("SOCIAL_AUTH_GITHUB_SECRET")
 
 # django-debug-toolbar
 # Note: disable when running Nox tests
