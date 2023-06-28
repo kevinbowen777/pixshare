@@ -40,7 +40,7 @@ repos:
       exclude: ^.*\b(migrations)\b.*$
 
   - repo: https://github.com/Riverside-Healthcare/djLint
-    rev: v1.31.0
+    rev: v1.31.1
     hooks:
     - id: djlint-reformat-django
     - id: djlint-django
