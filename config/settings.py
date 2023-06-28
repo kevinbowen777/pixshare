@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     # "debug_toolbar",
     "django_extensions",
     "social_django",
+    # Local Applications
+    "images.apps.ImagesConfig",
 ]
 
 MIDDLEWARE = [
