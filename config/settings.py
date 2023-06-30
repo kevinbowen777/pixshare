@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     # "debug_toolbar",
     "django_extensions",
     "social_django",
+    "easy_thumbnails",
     # Local Applications
     "images.apps.ImagesConfig",
 ]
