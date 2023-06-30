@@ -43,6 +43,7 @@ psycopg2-binary = "^2.9.5"
 pillow = "^9.5.0"
 social-auth-app-django = "^5.2.0"
 requests = "^2.31.0"
+easy-thumbnails = "^2.8.5"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.3.0"

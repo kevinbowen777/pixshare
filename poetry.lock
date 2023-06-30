@@ -625,6 +625,24 @@ conda = ["pyyaml"]
 pipenv = ["pipenv (<=2022.12.19)"]
 
 [[package]]
+name = "easy-thumbnails"
+version = "2.8.5"
+description = "Easy thumbnails for Django"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "easy-thumbnails-2.8.5.tar.gz", hash = "sha256:7e4e912609fc9b60b3a1fef6557ec15ddf9c4f946267a92e6920dfd4dd765e35"},
+    {file = "easy_thumbnails-2.8.5-py3-none-any.whl", hash = "sha256:97f5a5278d8b6c1f5b1b7473f3737d29b18f5c1159cbdf0ab28674fdac2f8c87"},
+]
+
+[package.dependencies]
+django = ">=2.2"
+pillow = "*"
+
+[package.extras]
+svg = ["reportlab", "svglib"]
+
+[[package]]
 name = "editorconfig"
 version = "0.12.3"
 description = "EditorConfig File Locator and Interpreter for Python"
@@ -1947,4 +1965,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "a777b797bf24b35d0df2679b0e3ff97aba73a42630a7fed64a1825ccfd266a20"
+content-hash = "e815bc700ac1ca11ab29286fcbf0bc6938d1cf05a1e40dd3a32d3e72cbf9eef1"
