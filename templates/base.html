@@ -50,5 +50,13 @@
       {% block content %}
       {% endblock content %}
     </div>
+    <!-- Local JavaScript -->
+    <script>
+        document.addEventListener("DomContentLoaded", (event) => {
+          // DOM loaded
+          {% block domready %}
+          {% endblock domready %}
+        })
+    </script>
   </body>
 </html>
