@@ -1,6 +1,8 @@
 """Settings for the pixshare project."""
 from pathlib import Path
 
+from django.urls import reverse_lazy
+
 # import socket  # noqa: E402 # Comment out if not using debug_toolbar
 from environs import Env
 
@@ -163,6 +165,10 @@ SOCIAL_AUTH_PIPELINE = [
     "social_core.pipeline.social_auth.load_extra_data",
     "social_core.pipeline.user.user_details",
 ]
+
+ABSOLUTE_URL_OVERRIDES = {
+    "auth.user": lambda u: reverse_lazy("user_detail", args=[u.username])
+}
 
 # django-debug-toolbar
 # Note: disable when running Nox tests
