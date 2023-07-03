@@ -1,8 +1,9 @@
 import pytest
 from django.test import RequestFactory
 
-from accounts.models import CustomUser
-from accounts.tests.factories import UserFactory
+from account.models import Profile
+
+# from account.tests.factories import UserFactory
 
 
 @pytest.fixture(autouse=True)
@@ -11,8 +12,9 @@ def media_storage(settings, tmpdir):
 
 
 @pytest.fixture
-def user() -> CustomUser:
-    return UserFactory()
+def user() -> Profile:
+    # return UserFactory()
+    pass
 
 
 @pytest.fixture
