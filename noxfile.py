@@ -5,7 +5,7 @@ import nox
 
 nox.options.sessions = "lint", "safety", "tests"
 locations = (
-    "accounts",
+    "account",
     "config",
     "pages",
     "./noxfile.py",
