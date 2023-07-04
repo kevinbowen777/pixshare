@@ -40,14 +40,14 @@ Django = "^4.2.2"
 django-extensions = "^3.2.3"
 environs = {extras = ["django"], version = "^9.5.0"}
 psycopg2-binary = "^2.9.5"
-pillow = "^9.5.0"
+pillow = "^10.0"
 social-auth-app-django = "^5.2.0"
 requests = "^2.31.0"
 easy-thumbnails = "^2.8.5"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.3.0"
-ruff = "^0.0.275"
+ruff = "^0.0.276"
 pre-commit = "^3.3.3"
 nox = "^2023.4.22"
 safety = "2.4.0b1"
