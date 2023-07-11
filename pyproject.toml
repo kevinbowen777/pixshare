@@ -44,6 +44,7 @@ pillow = "^10.0"
 social-auth-app-django = "^5.2.0"
 requests = "^2.31.0"
 easy-thumbnails = "^2.8.5"
+redis = "^4.6.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.3.0"

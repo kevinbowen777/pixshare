@@ -172,6 +172,10 @@ ABSOLUTE_URL_OVERRIDES = {
     "auth.user": lambda u: reverse_lazy("user_detail", args=[u.username])
 }
 
+REDIS_HOST = "localhost"
+REDIS_PORT = 6379
+REDIS_DB = 0
+
 # django-debug-toolbar
 # Note: disable when running Nox tests
 # Use the following in Docker only:
