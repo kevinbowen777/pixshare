@@ -8,6 +8,7 @@ authors = [
 maintainers = [
 ]
 license = "MIT"
+
 readme = "README.md"
 
 homepage = ""
@@ -36,7 +37,8 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.11"
-Django = "^4.2.2"
+Django = "4.2.4"
+
 django-extensions = "^3.2.3"
 environs = {extras = ["django"], version = "^9.5.0"}
 psycopg2-binary = "^2.9.5"
