@@ -121,15 +121,22 @@ show_contexts = true
 title = "pixshare coverage report"
 
 [tool.djlint]
+exclude="htmlcov"
 files=["templates/"]
 indent=2
+max_line_length=120
 preserve_blank_lines=true
 
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "config.settings"
-python_files = ["tests.py", "test_*.py", "*_tests.py"]
+DJANGO_SETTINGS_MODULE = "config.test"
+# After changes to the db model, run the tests without --reuse-db flag
+# Otherwise, tests will generate an error:...exceptions.ImproperlyConfigured...
+# addopts = "-p no:warnings"
+addopts = "--reuse-db -p no:warnings"
+python_files = ["test_*.py"]
 filterwarnings = [
-    # "ignore::django.utils.deprecation.RemovedInDjango50Warning",
+    "ignore::django.utils.deprecation.RemovedInDjango50Warning",
+    "ignore::django.utils.deprecation.RemovedInDjango51Warning",
 ]
 
 [tool.ruff]
@@ -190,9 +197,9 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 [tool.ruff.per-file-ignores]
 # "accounts/tests/factories.py" = ["BLK100"] (Not supported)
 # "accounts/tests/*" = ["BLK100"] (Not supported)
-"accounts/tests/*" = ["S101", "S106"]
+"account/tests/*" = ["S101", "S106"]
+"actions/tests/*" = ["S101", "S106"]
 "config/test.py" = ["S101", "S106"]
-"pages/tests/*" = ["S101", "S106"]
 
 [tool.ruff.mccabe]
 # Unlike Flake8, default to a complexity level of 10.
