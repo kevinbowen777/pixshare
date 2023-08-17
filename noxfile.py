@@ -1,4 +1,4 @@
-"""Nox sessions - default template - django-start"""
+"""Nox sessions - pixshare"""
 import tempfile
 
 import nox
@@ -6,8 +6,8 @@ import nox
 nox.options.sessions = "lint", "safety", "tests"
 locations = (
     "account",
+    "actions",
     "config",
-    "pages",
     "./noxfile.py",
     "docs/conf.py",
 )
