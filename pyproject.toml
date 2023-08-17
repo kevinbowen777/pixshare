@@ -69,6 +69,7 @@ ipython = "^8.14.0"
 friendly = "^0.7.21"
 colorama = "^0.4.6"
 furo = "^2023.7.26"
+django-types = "^0.17.0"
 
 [tool.black]
 line-length = 88
@@ -125,6 +126,41 @@ files=["templates/"]
 indent=2
 max_line_length=120
 preserve_blank_lines=true
+
+[tool.pyright]
+include = ["account", "actions", "config"]
+exclude = ["**/tests",
+    "**/__pycache__",
+    "**/migrations",
+]
+ignore = ["docs/_build"]
+defineConstant = { DEBUG = true }
+stubPath = ""
+venv = "pixshare-6u_ddoxM-py3.11"
+venvPath = "../../../venvs"
+
+typeCheckingMode = "basic"
+useLibraryCodeForTypes = true
+strictListInference = true
+strictDictionaryInference = true
+reportConstantRedefinition = "error"
+reportOptionalCall = "error"
+reportOptionalContextManager = "error"
+reportOptionalIterable = "error"
+reportOptionalMemberAccess = "error"
+reportMissingImports = true
+reportOptionalOperand = "error"
+reportOptionalSubscript = "error"
+reportUnnecessaryCast = "warning"
+reportUnnecessaryComparison = "error"
+reportUnnecessaryTypeIgnoreComment = "warning"
+
+pythonVersion = "3.11"
+pythonPlatform = "Linux"
+
+executionEnvironments = [
+  { root = ".", pythonVersion = "3.11", extraPaths = [ "account", "actions", "config" ] },
+]
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.test"
