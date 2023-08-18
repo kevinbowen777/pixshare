@@ -9,7 +9,7 @@ In the application directory, run the following command:
 
 .. code-block:: console
 
-    $ python man# date_of_birth.py shell_plus
+    $ python shell_plus
 
 Sample user list
 ----------------
