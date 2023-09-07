@@ -37,7 +37,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.11"
-Django = "4.2.4"
+Django = "4.2.5"
 
 django-extensions = "^3.2.3"
 environs = {extras = ["django"], version = "^9.5.0"}
