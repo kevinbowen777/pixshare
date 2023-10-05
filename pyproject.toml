@@ -36,7 +36,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.12"
 Django = "4.2.5"
 
 django-extensions = "^3.2.3"
@@ -63,14 +63,14 @@ pytest-cov = "^4.1.0"
 pytest-django = "^4.5.2"
 # For running dev server with HTTPS
 # python manage.py runserver_plus --cert-file cert.crt
-werkzeug = "^2.3.6"
+werkzeug = "^3.0"
 pyopenssl = "^23.2.0"
 ipython = "^8.14.0"
 friendly = "^0.7.21"
 colorama = "^0.4.6"
 sphinx = ">= 7.2.5, < 7.3.0"
 furo = "^2023.7.26"
-django-types = "^0.17.0"
+django-types = "^0.18.0"
 
 [tool.black]
 line-length = 88
@@ -137,7 +137,7 @@ exclude = ["**/tests",
 ignore = ["docs/_build"]
 defineConstant = { DEBUG = true }
 stubPath = ""
-venv = "pixshare-6u_ddoxM-py3.11"
+venv = "pixshare-6u_ddoxM-py3.12"
 venvPath = "../../../venvs"
 
 typeCheckingMode = "basic"
@@ -156,11 +156,11 @@ reportUnnecessaryCast = "warning"
 reportUnnecessaryComparison = "error"
 reportUnnecessaryTypeIgnoreComment = "warning"
 
-pythonVersion = "3.11"
+pythonVersion = "3.12"
 pythonPlatform = "Linux"
 
 executionEnvironments = [
-  { root = ".", pythonVersion = "3.11", extraPaths = [ "account", "actions", "config" ] },
+  { root = ".", pythonVersion = "3.12", extraPaths = [ "account", "actions", "config" ] },
 ]
 
 [tool.pytest.ini_options]
@@ -227,7 +227,7 @@ line-length = 88
 # Allow unused variables when underscore-prefixed.
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
-# Assume Python 3.11.
+# Assume Python 3.12.
 # target-version = "py311"
 
 [tool.ruff.per-file-ignores]
