@@ -49,7 +49,7 @@ redis = "^4.6.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.3.0"
-ruff = ">= 0.0.275, < 0.0.300"
+ruff = "^0.1.0"
 pre-commit = "^3.3.3"
 nox = "^2023.4.22"
 safety = "2.4.0b2"
@@ -175,6 +175,8 @@ filterwarnings = [
 ]
 
 [tool.ruff]
+preview = true
+unsafe-fixes = false
 select = [
     "B",    # flake8-bugbear
     "C90",  # mccabe
