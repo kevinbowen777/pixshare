@@ -21,7 +21,7 @@ classifiers = [
     "Development Status :: 2 - Pre-Alpha",
     "Environment :: Web Environment",
     "Framework :: Django",
-    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
@@ -36,7 +36,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.12"
-Django = "4.2.8"
+Django = "5.0"
 
 django-extensions = "^3.2.3"
 environs = {extras = ["django"], version = "^9.5.0"}
