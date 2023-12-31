@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pixshare"
-version = "0.1.0"
+version = "0.2.0"
 description = "A Django web application for users to bookmark and share images"
 authors = [
     "Kevin Bowen <kevin.bowen@gmail.com>"
@@ -18,7 +18,7 @@ documentation = "file:///docs/index.rst"
 keywords = ["django", "web-application", "template"]
 
 classifiers = [
-    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 4 - Beta",
     "Environment :: Web Environment",
     "Framework :: Django",
     "Framework :: Django :: 5.0",
@@ -39,7 +39,7 @@ python = "^3.12"
 Django = "5.0"
 
 django-extensions = "^3.2.3"
-environs = {extras = ["django"], version = "^9.5.0"}
+environs = { version = "^10.0", extras = ["django"] }
 psycopg2-binary = "^2.9.5"
 pillow = "^10.0"
 social-auth-app-django = "^5.2.0"
