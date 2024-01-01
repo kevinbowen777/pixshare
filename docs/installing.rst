@@ -9,7 +9,7 @@ To install the ``pixshare`` project, run the following command in your terminal:
 .. code-block:: console
 
    $ git clone https://github.com/kevinbowen777/pixshare.git
-   $ cd pixshare 
+   $ cd pixshare
 
 Local installation
 ^^^^^^^^^^^^^^^^^^
