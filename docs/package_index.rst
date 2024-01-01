@@ -186,5 +186,5 @@ friendly
 TODO: Add link to local coverage reports
 
  .. _pixshare: https://github.com/kevinbowen777/pixshare/
- .. _pyproject.toml: https://github.com/kevinbowen777/pixshare/blob/master/pyproject.toml  
+ .. _pyproject.toml: https://github.com/kevinbowen777/pixshare/blob/master/pyproject.toml
  .. _requirements.txt: https://github.com/kevinbowen777/pixshare/blob/master/requirements.txt
