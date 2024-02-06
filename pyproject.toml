@@ -57,13 +57,14 @@ django-debug-toolbar = "^4.1.0"
 djlint = "^1.31.0"
 coverage = { version = "^7.0.0", extras = ["toml"] }
 django-coverage-plugin = "^3.0.0"
-pytest = "^7.0"
+pytest = "^8.0"
+pytest-sugar = "^1.0"
 pytest-cov = "^4.1.0"
 pytest-django = "^4.5.2"
 # For running dev server with HTTPS
 # python manage.py runserver_plus --cert-file cert.crt
 werkzeug = "^3.0"
-pyopenssl = "^23.2.0"
+pyopenssl = "^24.0"
 ipython = "^8.14.0"
 friendly = "^0.7.21"
 colorama = "^0.4.6"
