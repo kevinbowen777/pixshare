@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# drun - Set of commands to run against Django projects within Docker
+#           containers. Make sure the the alias `alias drun='./drun' is 
+#           included in your .bashrc
+
 set -o errexit
 set -o pipefail
 
@@ -45,27 +49,22 @@ function cmd {
 
 function cov:test {
   # Run pytest
-  # cmd coverage run -m pytest "${@}"
-  coverage run -m pytest "${@}"
+  cmd coverage run -m pytest "${@}"
 }
 
 function cov:test-slow {
   # Run pytest & show 10 slowest tests
-  # cmd coverage run -m pytest "${@}" --durations 10
-  coverage run -m pytest "${@}" --durations 10
+  cmd coverage run -m pytest "${@}" --durations 10
 }
 
 function cov:report {
   # Generate coverage report to terminal
-  # cmd coverage report "${@}"
-  coverage report "${@}"
+  cmd coverage report "${@}"
 }
 
 function cov:html {
   # Output coverage report to ./htmlcov
-  # cmd coverage html "${@}"
-  # cmd coverage html "${@}"
-  coverage html "${@}"
+  cmd coverage html "${@}"
 }
 
 function down {
@@ -78,94 +77,84 @@ function manage {
 
   # We need to collectstatic before we run our tests.
   if [ "${1-''}" == "test" ]; then
-    # cmd python3 manage.py collectstatic --no-input
-    python3 manage.py collectstatic --no-input
+    cmd python3 manage.py collectstatic --no-input
   fi
 
-  # cmd python3 manage.py "${@}"
-  python3 manage.py "${@}"
+  cmd python3 manage.py "${@}"
 }
 
 function nox:black {
   # Check code for formatting violations
-  # cmd nox -s black-3.12 "${@}"
-  nox -s black-3.12 "${@}"
+  cmd nox -s black-3.12 "${@}"
 }
 
 function nox:cov {
   # Check code for test coverage
-  # cmd nox -s coverage-3.12 "${@}"
-  nox -s coverage-3.12 "${@}"
+  cmd nox -s coverage-3.12 "${@}"
 }
 
 function nox:docs {
   # Create Sphinx documentation in ./docs/_build directory
-  # cmd nox -s docs-3.12 "${@}"
-  nox -s docs-3.12 "${@}"
+  cmd nox -s docs-3.12 "${@}"
 }
 
 function nox:lint {
   # Run a number of ruff linting tests
-  # cmd nox -s lint-3.12 "${@}"
-  nox -s lint-3.12 "${@}"
+  cmd nox -s lint-3.12 "${@}"
 }
 
 function nox:pyright {
   # Run pyright typing checks
-  # cmd nox -s pyright-3.12 "${@}"
-  nox -s pyright-3.12 "${@}"
+  cmd nox -s pyright-3.12 "${@}"
 }
 
 function nox:safety {
   # Check code/packages for vulnerabilites against Safety db
-  # cmd nox -s safety-3.12 "${@}"
-  nox -s safety-3.12 "${@}"
+  cmd nox -s safety-3.12 "${@}"
 }
 
 function nox:test {
   # Run several pytest and coverage checks
-  # cmd nox -s tests-3.12 "${@}"
-  nox -s tests-3.12 "${@}"
+  cmd nox -s tests-3.12 "${@}"
 }
 
 function nox:all {
   # Perform all nox code quality tests together(except black)
   # cmd nox -s black-3.12 "${@}"
-  # cmd nox -s lint-3.12 "${@}"
-  # cmd nox -s coverage-3.12 "${@}"
+  cmd nox -s lint-3.12 "${@}"
+  cmd nox -s coverage-3.12 "${@}"
   # cmd nox -s pyright-3.12 "${@}"
-  # cmd nox -s safety-3.12 "${@}"
-  # cmd nox -s tests-3.12 "${@}"
+  cmd nox -s safety-3.12 "${@}"
+  cmd nox -s tests-3.12 "${@}"
   # nox -s lint-3.12 "${@}"
   # nox -s coverage-3.12 "${@}"
   # nox -s pyright-3.12 "${@}"
   # nox -s safety-3.12 "${@}"
   # nox -s tests-3.12 "${@}"
-  nox
+  # cmd nox
 }
 
 function nox:re-all {
   # Perform all nox code quality tests together(except black)
-  # cmd nox -rs black-3.12 "${@}"
-  # cmd nox -rs lint-3.12 "${@}"
-  # cmd nox -rs coverage-3.12 "${@}"
+  # cmd nox -s black-3.12 "${@}"
+  cmd nox -rs lint-3.12 "${@}"
+  cmd nox -rs coverage-3.12 "${@}"
   # cmd nox -rs pyright-3.12 "${@}"
-  # cmd nox -rs safety-3.12 "${@}"
-  # cmd nox -rs tests-3.12 "${@}"
-  # nox -rs lint-3.12 "${@}"
-  # nox -rs coverage-3.12 "${@}"
-  # nox -rs pyright-3.12 "${@}"
-  # nox -rs safety-3.12 "${@}"
-  # nox -rs tests-3.12 "${@}"
-  nox -rs
+  cmd nox -rs safety-3.12 "${@}"
+  cmd nox -rs tests-3.12 "${@}"
+  # nox -s lint-3.12 "${@}"
+  # nox -s coverage-3.12 "${@}"
+  # nox -s pyright-3.12 "${@}"
+  # nox -s safety-3.12 "${@}"
+  # nox -s tests-3.12 "${@}"
+  # cmd nox
 }
 
 function poe:old {
   # List any installed packages that are outdated
-  poetry show -ol
   # The following command runs twice as fast; but, requires the container
   # to be running:
-  # cmd poetry show -ol
+  cmd poetry show -ol
 }
 
 function poe:up {
@@ -175,16 +164,20 @@ function poe:up {
 
 function reqs:dev {
   # Export all package requirements
+  # poetry export -f requirements.txt --with=dev --without-hashes -o requirements-dev.txt
   poetry export --with=dev --output requirements-dev.txt
 }
 
 function reqs:prod {
   # Export production package requirements
+  # poetry export -f requirements.txt --without-hashes -o requirements.txt
   poetry export --output requirements.txt
 }
 
 function reqs:all {
   # Export production package requirements
+  # poetry export -f requirements.txt --with=dev --without-hashes -o requirements-dev.txt
+  # poetry export -f requirements.txt --without-hashes -o requirements.txt
   poetry export --output requirements.txt
   poetry export --with=dev --output requirements-dev.txt
 }
