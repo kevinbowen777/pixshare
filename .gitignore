@@ -1,15 +1,15 @@
-# updated 20221117
+# updated 20240226
 # from: https://github.com/github/gitignore
-docker-compose-prod.yml
 
+docker-compose-prod.yml
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Self-signed key certs
-cert.key
+# Self-signed certs for running dev server with HTTPS
 cert.crt
+cert.key
 
 # C extensions
 *.so

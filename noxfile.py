@@ -1,4 +1,5 @@
 """Nox sessions - pixshare"""
+
 import tempfile
 
 import nox
