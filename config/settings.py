@@ -1,4 +1,5 @@
 """Settings for the pixshare project."""
+
 from pathlib import Path
 
 from django.urls import reverse_lazy
