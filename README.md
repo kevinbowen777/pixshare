@@ -27,12 +27,12 @@
      - TBD
  - Dev/testing
      - Basic module testing templates
-     - [Coverage](https://pypi.org/project/coverage/) reports in `htmlcov` directory
+     - [Coverage](https://kevinbowen777.github.io/) reports on web
      - [Debug-toolbar](https://pypi.org/project/django-debug-toolbar/) available. See notes in `config/settings.py` for enabling.
      - [shell_plus](https://django-extensions.readthedocs.io/en/latest/shell_plus.html) with [IPython](https://pypi.org/project/ipython/) via [django-extensions](https://pypi.python.org/pypi/django-extensions/) package
      - [Pre-commit](https://github.com/pre-commit/pre-commit)
      - [Nox](https://pypi.org/project/nox/) testing sessions for latest Python 3.10, 3.11, and 3.12 
-         - [black](https://pypi.org/project/black/) (`nox -s black`)
+         - [coverage](https://pypi.org/project/coverage/) (`nox -s coverage`)
          - [Sphinx](https://pypi.org/project/Sphinx/) documentaion generation (`nox -s lint`)
          - linting (`nox -s lint`)
              - [ruff](https://pypi.org/project/ruff/)
