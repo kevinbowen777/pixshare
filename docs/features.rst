@@ -7,13 +7,12 @@ Features
    * For links to additional packages used in this repository, see the :doc:`Package Index <package_index>`
  * Dev/testing
 
-   * coverage_ reports are available in the `htmlcov` directory.
+   * coverage_ reports are available on the web.
    * django-debug-toolbar_ available. See notes in `config/settings.py` for enabling.
    * shell_plus_ with IPython_ via the django-extensions_ package.
    * pre-commit_
    * nox_ testing sessions for latest Python 3.10, and 3.11, 3.12.
 
-     * black_
      * Sphinx_ documentation generation
      * linting
 
@@ -28,7 +27,7 @@ You can run ``./run`` to get a list of commands and each command has documentati
 
 If you get tired of typing ``./run`` you can always create a shell alias with ``alias run=./run`` in your ``~/.bash_aliases`` or equivalent file. Then you'll be able to run ``run`` instead of ``./run``.
 
- .. _coverage: https://pypi.org/project/coverage/
+ .. _coverage: https://kevinbowen777.github.io/pixshare/
  .. _htmlcov:
  .. _django-debug-toolbar: https://pypi.org/project/django-debug-toolbar/
  .. _config/settings.py:
@@ -38,7 +37,6 @@ If you get tired of typing ``./run`` you can always create a shell alias with ``
  .. _django-extensions: https://pypi.python.org/pypi/django-extensions/
  .. _pre-commit: https://github.com/pre-commit/pre-commit
  .. _nox: https://pypi.org/project/nox/
- .. _black: https://pypi.org/project/black/
  .. _Sphinx: https://pypi.org/project/Sphinx/
  .. _ruff: https://beta.ruff.rs/docs/
  .. _safety: https://pypi.org/project/safety/

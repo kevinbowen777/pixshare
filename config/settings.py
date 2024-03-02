@@ -71,6 +71,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
             ],
             "loaders": default_loaders if DEBUG else cached_loaders,
+            "debug": True,
         },
     },
 ]
