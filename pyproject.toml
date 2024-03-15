@@ -42,7 +42,7 @@ classifiers = [
 python = "^3.12"
 Django = "5.0.3"
 
-environs = { version = "^10", extras = ["django"] }
+environs = { version = "^11", extras = ["django"] }
 django-extensions = "^3.2"
 psycopg2-binary = "^2.9.5"
 Pillow = "^10.0"
@@ -55,7 +55,7 @@ redis = "^4.6.0"
 django-debug-toolbar = "^4.0.0"
 pre-commit = "^3.0.0"
 ruff = ">=0.1.0, <=0.3.9"
-nox = "2023.4.22"
+nox = "2024.3.2"
 pytest = "^8.0"
 pytest-cov = "^4.0.0"
 pytest-django = "^4.5.2"
