@@ -15,7 +15,11 @@ homepage = "https://github.com/kevinbowen777/pixshare.git"
 repository = "https://github.com/kevinbowen777/pixshare.git"
 documentation = "file:///docs/index.rst"
 
-keywords = ["django", "web-application", "template"]
+keywords = [
+    "django",
+    "web-application",
+    "template",
+]
 
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -36,12 +40,12 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.12"
-Django = "5.0.2"
+Django = "5.0.3"
 
 environs = { version = "^10", extras = ["django"] }
 django-extensions = "^3.2"
 psycopg2-binary = "^2.9.5"
-pillow = "^10.0"
+Pillow = "^10.0"
 social-auth-app-django = "^5.2.0"
 requests = "^2.31.0"
 easy-thumbnails = "^2.8.5"
@@ -73,7 +77,11 @@ django-types = "^0.19.0"
 [tool.coverage.run]
 branch = true
 dynamic_context = "test_function"
-source = ["account", "actions", "config"]
+source = [
+    "account",
+    "config",
+    "actions",
+]
 omit = [
     "conftest.py",
     "manage.py",
@@ -111,7 +119,11 @@ preserve_blank_lines = true
 
 [tool.pyright]
 # See: https://github.com/microsoft/pyright/blob/main/docs/configuration.md
-include = ["account", "actions", "config"]
+include = [
+    "config",
+    "account",
+    "actions",
+]
 exclude = [
     "**/tests",
     "**/__pycache__",
