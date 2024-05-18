@@ -42,7 +42,7 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Django = "5.0.4"
+Django = "5.0.6"
 
 environs = { version = "^11", extras = ["django"] }
 django-extensions = "^3.2"
@@ -70,7 +70,7 @@ safety = "^3.0"
 ipython = "^8.4.0"
 friendly = "^0.7.0"
 colorama = "^0.4.4"
-werkzeug = "^3.0"
+werkzeug = "3.0.3"
 pyopenssl = ">=24.0, < 25.0"
 sphinx = ">= 7.3, < 7.4.0"
 furo = "^2024.0"
