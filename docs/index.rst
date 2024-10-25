@@ -3,7 +3,7 @@ pixshare
 
 The pixshare_ project is an image bookmarking website and part of the collection of `Web Framework Projects`_ . This repository runs a Django 5.1.x application using a JavaScript bookmarklet.
 
-.. _django-start: https://github.com/kevinbowen777/pixshare
+.. _pixshare: https://github.com/kevinbowen777/pixshare
 .. _Web Framework Projects: https://github.com/kevinbowen777/web-project-index
 
 Getting Started
