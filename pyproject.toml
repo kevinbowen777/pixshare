@@ -48,7 +48,7 @@ Django = "5.1.2"
 environs = { version = "^11", extras = ["django"] }
 django-extensions = "^3.2"
 psycopg = { version = "3.2.3", extras = ["binary"] } 
-Pillow = "^10.0"
+Pillow = ">=11.0, <12.0"
 social-auth-app-django = "^5.2.0"
 requests = "^2.31.0"
 easy-thumbnails = "^2.8.5"
