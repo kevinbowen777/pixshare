@@ -5,7 +5,7 @@
   [![Status](https://img.shields.io/badge/status-active-success.svg)]()
   [![GitHub Issues](https://img.shields.io/github/issues/kevinbowen777/pixshare.svg)](https://github.com/kevinbowen777/pixshare/issues)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-  [![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/kevinbowen777/261b3eac2838cf0bc3b365335c8323df/raw/covbadge.json)](https://kevinbowen777.github.io/pixshare/)
+  [![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/kevinbowen777/4ed2182b2448dd15f17648a6be92af35/raw/pixshare_covbadge.json)](https://kevinbowen777.github.io/pixshare/)
 
 </div>
 
