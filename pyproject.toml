@@ -1,25 +1,27 @@
-[tool.poetry]
+[project]
 name = "pixshare"
-version = "0.2.1"
+version = "0.2.2"
 description = "A Django web application for users to bookmark and share images"
+requires-python = ">=3.10.0, <3.14.0"
+dependencies = [
+    "Django (==5.1.4)",
+    "environs[django] (>=11.0, <15.0)",
+    "django-extensions (>=3.2.0, <3.3.0)",
+    "psycopg[binary] (==3.2.3)",
+    "Pillow (>=11.0, <12.0)",
+    "social-auth-app-django (==5.4.2)",
+    "requests (==2.32.3)",
+    "easy-thumbnails (==2.10)",
+    "redis (==4.6.0)",
+]
 authors = [
-    "Kevin Bowen <kevin.bowen@gmail.com>"
+    { name = "Kevin Bowen", email = "kevin.bowen@gmail.com" },
 ]
 maintainers = [
 ]
-license = "MIT"
-
+license = { text = "MIT" }
 readme = "README.md"
-
-homepage = "https://github.com/kevinbowen777/pixshare.git"
-repository = "https://github.com/kevinbowen777/pixshare.git"
-documentation = "file:///docs/index.rst"
-
-keywords = [
-    "django",
-    "web-application",
-    "template",
-]
+keywords = ["django","web-application","template",]
 
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -41,38 +43,34 @@ classifiers = [
 
 package-mode = false
 
-[tool.poetry.dependencies]
-python = "^3.10"
-Django = "5.1.4"
-
-environs = { version = "^11", extras = ["django"] }
-django-extensions = "^3.2"
-psycopg = { version = "3.2.3", extras = ["binary"] } 
-Pillow = ">=11.0, <12.0"
-social-auth-app-django = "^5.2.0"
-requests = "^2.31.0"
-easy-thumbnails = "^2.8.5"
-redis = "^4.6.0"
+[project.urls]
+Homepage = "https://github.com/kevinbowen777/pixshare.git"
+Changelog = "https://github.com/kevinbowen777/pixshare/NEWS"
+Repository = "https://github.com/kevinbowen777/pixshare.git"
+Documentation = "file:///docs/index.rst"
 
 [tool.poetry.group.dev.dependencies]
-django-debug-toolbar = "^4.0.0"
+django-debug-toolbar = ">=4.0.0, <5.0.0"
 pre-commit = ">=4.0, <5.0"
 ruff = ">=0.8, <1.0"
 nox = "2024.10.09"
-pytest = "^8.0"
+pytest = ">=8.0, <8.4"
 pytest-cov = ">=6.0.0, <7.0"
-pytest-django = "^4.5.2"
-pytest-sugar = "^1.0"
-coverage = { version = "^7.0.0", extras = ["toml"] }
-django-coverage-plugin = "^3.0.0"
-djlint = "^1.31.0"
+pytest-django = ">=4.5.2, <5.0.0"
+pytest-sugar = "1.0.0"
+coverage = { version = ">=7.0.0, <8.0.0", extras = ["toml"] }
+django-coverage-plugin = ">=3.0.0, <3.2.0"
 sphinx = ">= 8.0, <9.0"
+djlint = ">=1.31.0, <1.40.0"
 sphinx-lint = "1.0"
 safety = "3.2.3"
 werkzeug = ">=3.1, <4.0"
-pyopenssl = ">=24.0, <25.0"
-furo = "^2024.0"
+pyopenssl = ">=24.0, <26.0"
+furo = ">=2024.0, <2025.0"
 django-types = ">=0.20.0, <0.21.0"
+
+[tool.poetry.requires-plugins]
+poetry-plugin-export = ">=1.8"
 
 [tool.coverage.run]
 branch = true
@@ -168,7 +166,7 @@ DJANGO_SETTINGS_MODULE = "config.test"
 addopts = "--reuse-db -p no:warnings"
 python_files = ["test_*.py"]
 filterwarnings = [
-    "ignore::django.utils.deprecation.RemovedInDjango51Warning",
+    # "ignore::django.utils.deprecation.RemovedInDjango51Warning",
 ]
 
 [tool.ruff]
@@ -265,5 +263,5 @@ docstring-code-format = false
 docstring-code-line-length = "dynamic"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=2.0.0"]
 build-backend = "poetry.core.masonry.api"
