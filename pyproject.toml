@@ -4,10 +4,10 @@ version = "0.2.2"
 description = "A Django web application for users to bookmark and share images"
 requires-python = ">=3.10.0, <3.14.0"
 dependencies = [
-    "Django (==5.1.4)",
+    "Django (==5.1.5)",
     "environs[django] (>=11.0, <15.0)",
     "django-extensions (>=3.2.0, <3.3.0)",
-    "psycopg[binary] (==3.2.3)",
+    "psycopg[binary] (==3.2.4)",
     "Pillow (>=11.0, <12.0)",
     "social-auth-app-django (==5.4.2)",
     "requests (==2.32.3)",
@@ -47,10 +47,10 @@ package-mode = false
 Homepage = "https://github.com/kevinbowen777/pixshare.git"
 Changelog = "https://github.com/kevinbowen777/pixshare/NEWS"
 Repository = "https://github.com/kevinbowen777/pixshare.git"
-Documentation = "file:///docs/index.rst"
+Documentation = "file:///docs/_build/index.html"
 
 [tool.poetry.group.dev.dependencies]
-django-debug-toolbar = ">=4.0.0, <5.0.0"
+django-debug-toolbar = ">=5.0.0, <6.0.0"
 pre-commit = ">=4.0, <5.0"
 ruff = ">=0.8, <1.0"
 nox = "2024.10.09"
@@ -198,6 +198,7 @@ exclude = [
 
 [tool.ruff.lint]
 select = [
+    "A",    # flake8-builtins
     "B",    # flake8-bugbear
     "C90",  # mccabe
     "DJ",   # flake8-django
@@ -230,6 +231,7 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 "account/tests/*" = ["S101", "S106"]
 "actions/tests/*" = ["S101", "S106"]
 "config/test.py" = ["S101", "S106"]
+"docs/conf.py" = ["A001"]
 
 [tool.ruff.lint.mccabe]
 # Unlike Flake8, default to a complexity level of 10.
