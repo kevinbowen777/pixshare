@@ -4,7 +4,7 @@ version = "0.2.2"
 description = "A Django web application for users to bookmark and share images"
 requires-python = ">=3.10.0, <3.14.0"
 dependencies = [
-    "Django (==5.1.6)",
+    "Django (==5.1.7)",
     "environs[django] (>=11.0, <15.0)",
     "django-extensions (>=3.2.0, <3.3.0)",
     "psycopg[binary] (==3.2.6)",
