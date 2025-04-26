@@ -11,7 +11,7 @@ Features
    * django-debug-toolbar_ available. See notes in `config/settings.py` for enabling.
    * shell_plus_ with IPython_ via the django-extensions_ package.
    * pre-commit_
-   * nox_ testing sessions for latest Python 3.10, 3.11, 3.12, 3.13.
+   * nox_ testing sessions for latest Python 3.11, 3.12, 3.13.
 
      * Sphinx_ documentation generation
      * linting
