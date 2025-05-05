@@ -1,6 +1,6 @@
 [project]
 name = "pixshare"
-version = "0.2.2"
+version = "0.2.3"
 description = "A Django web application for users to bookmark and share images"
 requires-python = ">=3.11.0, <3.14.0"
 dependencies = [
