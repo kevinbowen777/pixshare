@@ -220,9 +220,9 @@ environs==14.3.0 ; python_version >= "3.11" and python_full_version < "3.14.0" \
 idna==3.10 ; python_version >= "3.11" and python_full_version < "3.14.0" \
     --hash=sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9 \
     --hash=sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3
-marshmallow==4.0.0 ; python_version >= "3.11" and python_full_version < "3.14.0" \
-    --hash=sha256:3b6e80aac299a7935cfb97ed01d1854fb90b5079430969af92118ea1b12a8d55 \
-    --hash=sha256:e7b0528337e9990fd64950f8a6b3a1baabed09ad17a0dfb844d701151f92d203
+marshmallow==4.0.1 ; python_version >= "3.11" and python_full_version < "3.14.0" \
+    --hash=sha256:72f14ef346f81269dbddee891bac547dda1501e9e08b6a809756ea3dbb7936a1 \
+    --hash=sha256:e1d860bd262737cb2d34e1541b84cb52c32c72c9474e3fe6f30f137ef8b0d97f
 oauthlib==3.3.1 ; python_version >= "3.11" and python_full_version < "3.14.0" \
     --hash=sha256:0f0f8aa759826a193cf66c12ea1af1637f87b9b4622d46e866952bb022e538c9 \
     --hash=sha256:88119c938d2b8fb88561af5f6ee0eec8cc8d552b7bb1f712743136eb7523b7a1
@@ -412,9 +412,9 @@ social-auth-core==4.7.0 ; python_version >= "3.11" and python_full_version < "3.
 sqlparse==0.5.3 ; python_version >= "3.11" and python_full_version < "3.14.0" \
     --hash=sha256:09f67787f56a0b16ecdbde1bfc7f5d9c3371ca683cfeaa8e6ff60b4807ec9272 \
     --hash=sha256:cf2196ed3418f3ba5de6af7e82c694a9fbdbfecccdfc72e281548517081f16ca
-typing-extensions==4.14.1 ; python_version >= "3.11" and python_version < "3.13" \
-    --hash=sha256:38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36 \
-    --hash=sha256:d1e1e3b58374dc93031d6eda2420a48ea44a36c2b4766a4fdeb3710755731d76
+typing-extensions==4.15.0 ; python_version >= "3.11" and python_version < "3.13" \
+    --hash=sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466 \
+    --hash=sha256:f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548
 tzdata==2025.2 ; python_version >= "3.11" and python_full_version < "3.14.0" and sys_platform == "win32" \
     --hash=sha256:1a403fada01ff9221ca8044d701868fa132215d84beb92242d9acd2147f667a8 \
     --hash=sha256:b60a638fcc0daffadf82fe0f57e53d06bdec2f36c4df66280ae79bce6bd6f2b9
