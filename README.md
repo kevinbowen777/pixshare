@@ -31,7 +31,7 @@
      - [Debug-toolbar](https://pypi.org/project/django-debug-toolbar/) available. See notes in `config/settings.py` for enabling.
      - [shell_plus](https://django-extensions.readthedocs.io/en/latest/shell_plus.html) with [IPython](https://pypi.org/project/ipython/) via [django-extensions](https://pypi.python.org/pypi/django-extensions/) package
      - [Pre-commit](https://github.com/pre-commit/pre-commit)
-     - [Nox](https://pypi.org/project/nox/) testing sessions for latest Python 3.11, 3.12, 3.13 
+     - [Nox](https://pypi.org/project/nox/) testing sessions for latest Python 3.11, 3.12, 3.13, 3.14 
          - [coverage](https://pypi.org/project/coverage/) (`nox -s coverage`)
          - [Sphinx](https://pypi.org/project/Sphinx/) documentaion generation (`nox -s lint`)
          - linting (`nox -s lint`)
@@ -82,11 +82,11 @@
  - `docker compose exec web python manage.py test`
  - `coverage run -m pytest`
  - Nox (includes sessions for black, lint, audit, tests)
-     - testing supported for Python 3.11, 3.12, 3.13
+     - testing supported for Python 3.11, 3.12, 3.13, 3.14
      - e.g. `nox`, `nox -rs lint-3.13`, `nox -s tests`
        - `nox`
        - `nox -s black-3.12`
-       - `nox -s docs-3.13`
+       - `nox -s docs-3.14`
        - `nox -rs lint-3.12` (Use the 'r' flag to reuse existing session)
        - `nox -s pyright-3.11`
        - `nox -s audit` (will run tests against all Python versions)
