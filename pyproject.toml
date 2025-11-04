@@ -2,13 +2,13 @@
 name = "pixshare"
 version = "0.2.3"
 description = "A Django web application for users to bookmark and share images"
-requires-python = ">=3.11.0, <3.14.0"
+requires-python = ">=3.11.0"
 dependencies = [
     "Django (==5.2.7)",
     "environs[django] (>=11.0, <15.0)",
     "django-extensions (>=4.1.0, <4.2.0)",
-    "psycopg[binary] (==3.2.10)",
-    "Pillow (>=11.0, <12.0)",
+    "psycopg[binary] (==3.2.12)",
+    "Pillow (>=12.0, <13.0)",
     "social-auth-app-django (==5.6.0)",
     "requests (==2.32.5)",
     "easy-thumbnails (==2.10.1)",
@@ -37,6 +37,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Internet :: WWW/HTTP",
 ]
 
@@ -49,17 +50,20 @@ Documentation = "file:///docs/_build/index.html"
 [tool.poetry]
 package-mode = false
 
+[tool.poetry.dependencies]
+python = ">=3.11.0, <3.15.0"
+
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = ">=5.0.0, <6.0.0"
 pre-commit = ">=4.0, <5.0"
 ruff = ">=0.8, <1.0"
-nox = "2025.05.01"
+nox = "2025.10.16"
 pytest = ">=8.4.0, <8.5.0"
-pytest-cov = ">=6.0.0, <7.0"
+pytest-cov = ">=7.0.0, <8.0"
 pytest-django = ">=4.5.2, <5.0.0"
-pytest-sugar = "1.0.0"
+pytest-sugar = "1.1.1"
 coverage = { version = ">=7.0.0, <8.0.0", extras = ["toml"] }
-django-coverage-plugin = ">=3.0.0, <3.2.0"
+django-coverage-plugin = ">=3.2.0, <3.3.0"
 sphinx = ">= 8.0, <9.0"
 djlint = ">=1.31.0, <1.40.0"
 sphinx-lint = "1.0"
@@ -129,7 +133,7 @@ ignore = ["docs/_build"]
 defineConstant = { DEBUG = true }
 stubPath = ""
 # The following may need to be modified when collaborating with others
-venv = "pixshare-6u_ddoxM-py3.13"
+venv = "pixshare-6u_ddoxM-py3.14"
 venvPath = "../../../venvs"
 # More portable venv config
 # venvPath = "."
@@ -151,11 +155,11 @@ reportUnnecessaryCast = "warning"
 reportUnnecessaryComparison = "error"
 reportUnnecessaryTypeIgnoreComment = "warning"
 
-pythonVersion = "3.13"
+pythonVersion = "3.14"
 pythonPlatform = "Linux"
 
 executionEnvironments = [
-  { root = ".", pythonVersion = "3.13", extraPaths = [ "account", "actions", "config" ] },
+  { root = ".", pythonVersion = "3.14", extraPaths = [ "account", "actions", "config" ] },
 ]
 
 [tool.pytest.ini_options]
@@ -178,8 +182,8 @@ unsafe-fixes = false
 line-length = 88
 indent-width = 4
 
-# Assume Python 3.13.x
-target-version = "py313"
+# Assume Python 3.14.x
+target-version = "py314"
 
 # Exclude a variety of commonly ignored directories.
 exclude = [
