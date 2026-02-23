@@ -259,9 +259,9 @@ cryptography==46.0.5 ; python_version >= "3.11" and python_full_version < "3.15.
 defusedxml==0.7.1 ; python_version >= "3.11" and python_full_version < "3.15.0" \
     --hash=sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69 \
     --hash=sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61
-dj-database-url==3.1.0 ; python_version >= "3.11" and python_full_version < "3.15.0" \
-    --hash=sha256:155a56fbbecbaaf1348ccd73bf29138b4c9988363ba08261a0f0145e392e638c \
-    --hash=sha256:d80218426b83f9302c8d27d4fccf52de5cf0cab179f0645fb2839f37605d1353
+dj-database-url==3.1.2 ; python_version >= "3.11" and python_full_version < "3.15.0" \
+    --hash=sha256:544e015fee3efa5127a1eb1cca465f4ace578265b3671fe61d0ed7dbafb5ec8a \
+    --hash=sha256:63c20e4bbaa51690dfd4c8d189521f6bf6bc9da9fcdb23d95d2ee8ee87f9ec62
 dj-email-url==1.0.6 ; python_full_version >= "3.11.0" and python_full_version < "3.15.0" \
     --hash=sha256:55ffe3329e48f54f8a75aa36ece08f365e09d61f8a209773ef09a1d4760e699a \
     --hash=sha256:cbd08327fbb08b104eac160fb4703f375532e4c0243eb230f5b960daee7a96db
@@ -277,9 +277,9 @@ django-extensions==4.1 ; python_version >= "3.11" and python_full_version < "3.1
 easy-thumbnails==2.10.1 ; python_version >= "3.11" and python_full_version < "3.15.0" \
     --hash=sha256:24462d63dd31543ef1585538b2bfefe0db96d3409bb431c70b81548fb2cfc5be \
     --hash=sha256:a50aa5f99387546c35ab5ba1ea9b3cbbc5658e65601cd34949f62137c32c222e
-environs==14.5.0 ; python_version >= "3.11" and python_full_version < "3.15.0" \
-    --hash=sha256:1abd3e3a5721fb09797438d6c902bc2f35d4580dfaffe68b8ee588b67b504e13 \
-    --hash=sha256:f7b8f6fcf3301bc674bc9c03e39b5986d116126ffb96764efd34c339ed9464ee
+environs==14.6.0 ; python_version >= "3.11" and python_full_version < "3.15.0" \
+    --hash=sha256:ed2767588deb503209ffe4dd9bb2b39311c2e4e7e27ce2c64bf62ca83328d068 \
+    --hash=sha256:f8fb3d6c6a55872b0c6db077a28f5a8c7b8984b7c32029613d44cef95cfc0812
 idna==3.11 ; python_version >= "3.11" and python_full_version < "3.15.0" \
     --hash=sha256:771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea \
     --hash=sha256:795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902
