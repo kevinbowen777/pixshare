@@ -4,7 +4,7 @@ version = "0.2.3"
 description = "A Django web application for users to bookmark and share images"
 requires-python = ">=3.11.0"
 dependencies = [
-    "Django (==5.2.11)",
+    "Django (==5.2.12)",
     "environs[django] (>=11.0, <15.0)",
     "django-extensions (>=4.1.0, <4.2.0)",
     "psycopg[binary] (==3.3.3)",
@@ -68,7 +68,7 @@ sphinx = ">= 8.0, <9.0"
 djlint = ">=1.31.0, <1.40.0"
 sphinx-lint = "1.0.2"
 werkzeug = ">=3.1, <4.0"
-pyopenssl = ">=24.0, <26.0"
+pyopenssl = ">=26.0, <27.0"
 furo = ">=2024.0, <2025.0"
 django-types = ">=0.23.0, <0.24.0"
 pip-audit = "^2.9.0"
