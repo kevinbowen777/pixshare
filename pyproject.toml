@@ -2,7 +2,7 @@
 name = "pixshare"
 version = "0.2.3"
 description = "A Django web application for users to bookmark and share images"
-requires-python = ">=3.11.0"
+requires-python = ">=3.12.0"
 dependencies = [
     "Django (==5.2.14)",
     "environs[django] (==15.0.1)",
@@ -10,7 +10,7 @@ dependencies = [
     "psycopg[binary] (==3.3.4)",
     "Pillow (>=12.2.0)",
     "social-auth-app-django (==5.9.0)",
-    "requests (==2.34.1)",
+    "requests (==2.34.2)",
     "easy-thumbnails (==2.10.1)",
     "redis (==4.6.0)",
 ]
@@ -34,7 +34,6 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
@@ -51,7 +50,7 @@ Documentation = "file:///docs/_build/index.html"
 package-mode = false
 
 [tool.poetry.dependencies]
-python = ">=3.11.0, <3.15.0"
+python = ">=3.12.0, <3.15.0"
 
 [tool.poetry.group.dev.dependencies]
 django-debug-toolbar = ">=5.0.0, <6.0.0"
@@ -64,12 +63,12 @@ pytest-django = ">=4.5.2, <5.0.0"
 pytest-sugar = "1.1.1"
 coverage = { version = ">=7.0.0, <8.0.0", extras = ["toml"] }
 django-coverage-plugin = ">=3.2.0, <3.3.0"
-sphinx = ">= 8.0, <9.0"
+sphinx = "9.1.0"
 djlint = ">=1.31.0, <1.40.0"
 sphinx-lint = "1.0.2"
 werkzeug = ">=3.1, <4.0"
 pyopenssl = ">=26.0, <27.0"
-furo = ">=2024.0, <2025.0"
+furo = "2025.12.19"
 django-types = ">=0.24.0, <0.25.0"
 pip-audit = "^2.9.0"
 
