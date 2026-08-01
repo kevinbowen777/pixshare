@@ -40,15 +40,15 @@
             - [djlint](https://pypi.org/project/djlint/)
         - [pip-audit](https://pypi.org/project/pip-audit/)(python package vulnerability testing) (`nox -s audit`)
         - [pytest](https://docs.pytest.org/en/latest/) sessions with
-           [pytest-cov](https://pypi.org/project/pytest-cov/)
-           [pytest-django](https://pypi.org/project/pytest-django/) (`coverage run -m pytest`)
+          [pytest-cov](https://pypi.org/project/pytest-cov/)
+          [pytest-django](https://pypi.org/project/pytest-django/) (`coverage run -m pytest`)
     - `run` command menu
 
-    (adapted from Nick Janetakis' helpful [docker-django-example](https://github.com/nickjj/docker-django-example))
+  (adapted from Nick Janetakis' helpful [docker-django-example](https://github.com/nickjj/docker-django-example))
 
-    You can run `./run` to get a list of commands and each command has documentation in the run file itself. This comes in handy to run various Docker commands because sometimes these commands can be a bit long to type.
+  You can run `./run` to get a list of commands and each command has documentation in the run file itself. This comes in handy to run various Docker commands because sometimes these commands can be a bit long to type.
 
-    *If you get tired of typing `./run` you can always create a shell alias with `alias run=./run` in your `~/.bash_aliases` or equivalent file. Then you'll be able to run `run` instead of `./run`.*
+  *If you get tired of typing `./run` you can always create a shell alias with `alias run=./run` in your `~/.bash_aliases` or equivalent file. Then you'll be able to run `run` instead of `./run`.*
 
 ---
 
@@ -68,13 +68,12 @@
     - `docker compose build --build-arg "ENV=PROD"`
     - `docker compose exec web python manage.py migrate`
     - `docker compose exec web python manage.py createsuperuser`
-     Additional commands:
+  Additional commands:
 
         - `docker compose exec web python manage.py shell_plus`
-         (loads Django shell autoloading project models & classes)
+  (loads Django shell autoloading project models & classes)
         - `docker run -it django-start-web bash`
-         (CLI access to container)
-
+  (CLI access to container)
 - Browse to <http://127.0.0.1:8000> or <http://127.0.0.1:8000/resources/>
 - Pre-commit:
     - To add the hook, run the following command in the poetry shell:
