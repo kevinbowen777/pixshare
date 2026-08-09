@@ -4,8 +4,8 @@ version = "0.2.4"
 description = "A Django web application for users to bookmark and share images"
 requires-python = ">=3.12.0"
 dependencies = [
-    "Django (==6.0.7)",
-    "environs[django] (==15.0.1)",
+    "Django (==6.0.8)",
+    "environs[django] (==15.1.0)",
     "django-extensions (==4.1.0)",
     "psycopg[binary] (==3.3.4)",
     "Pillow (==12.3.0)",
@@ -64,7 +64,7 @@ pytest-sugar = "1.1.1"
 coverage = { version = ">=7.0.0, <8.0.0", extras = ["toml"] }
 django-coverage-plugin = ">=3.2.0, <3.3.0"
 sphinx = "9.1.0"
-djlint = ">=1.40.0, <1.49.0"
+djlint = ">=1.40.0, <1.50.0"
 sphinx-lint = "1.0.2"
 werkzeug = ">=3.1, <4.0"
 pyopenssl = ">=26.0, <27.0"
@@ -73,7 +73,7 @@ django-types = ">=0.24.0, <0.25.0"
 pip-audit = "2.10.1"
 
 [tool.poetry.requires-plugins]
-poetry-plugin-export = ">=1.8"
+poetry-plugin-export = ">=1.10.0"
 
 [tool.coverage.run]
 branch = true
