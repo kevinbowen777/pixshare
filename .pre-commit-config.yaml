@@ -28,7 +28,7 @@ repos:
         files: (^|/)a/.+\.(py|html|sh|css|js)$
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.16.3
+    rev: v0.16.6
     hooks:
       # Run the linter
       - id: ruff
@@ -38,7 +38,7 @@ repos:
         exclude: ^.*\b(migrations)\b.*$
 
   - repo: https://github.com/Riverside-Healthcare/djLint
-    rev: v1.44.2
+    rev: v1.46.1
     hooks:
       - id: djlint-reformat-django
         exclude: "htmlcov"
@@ -68,4 +68,4 @@ repos:
     rev: 1.32.0
     hooks:
       - id: django-upgrade
-        args: [--target-version, "6.0"]
+        args: [--target-version, "6.1"]
