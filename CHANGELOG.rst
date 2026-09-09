@@ -27,6 +27,40 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+pixshare 0.2.6 (2026-09-09)
+===========================
+
+Contributor-facing changes
+--------------------------
+
+-  (`#338 <https://github.com/kevinbowen777/pixshare/338>`_): Initial zizmor remediation. Pin GitHub actions to hashes.
+
+-  (`#341 <https://github.com/kevinbowen777/pixshare/341>`_): Update nox to 2026.8.17
+
+-  (`#341 <https://github.com/kevinbowen777/pixshare/341>`_): Update django-debug-toolbar to 7.1.1
+
+-  (`#341 <https://github.com/kevinbowen777/pixshare/341>`_): Update testing to Python 3.14.7, 3.13.15, and 3.12.14
+
+-  (`#346 <https://github.com/kevinbowen777/pixshare/346>`_): Update djlint to 1.46.1
+
+-  (`#346 <https://github.com/kevinbowen777/pixshare/346>`_): Update django-debug-toolbar to 8.0.0
+
+-  (`#346 <https://github.com/kevinbowen777/pixshare/346>`_): Update psycopg to 3.3.5
+
+-  (`#346 <https://github.com/kevinbowen777/pixshare/346>`_): Update towncrier to 26.9.0
+
+-  (`#346 <https://github.com/kevinbowen777/pixshare/346>`_): Upgrade environs to 15.2.0
+
+-  (`#347 <https://github.com/kevinbowen777/pixshare/347>`_): Replace master with main in static gh action
+
+-  (`#348 <https://github.com/kevinbowen777/pixshare/348>`_): Upgrade GitHub actions to latest versions
+
+
+New features
+------------
+
+-  (`#346 <https://github.com/kevinbowen777/pixshare/346>`_): Upgrade Django to 6.1.1
+
 pixshare 0.2.5 (2026-08-20)
 ===========================
 
