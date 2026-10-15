@@ -4,7 +4,7 @@
 project = "pixshare"
 author = "Kevin Bowen"
 copyright = f"%Y, {author}"
-release = "0.2.7"
+release = "0.2.8"
 
 # -- General configuration --------------------------------------------
 extensions = [

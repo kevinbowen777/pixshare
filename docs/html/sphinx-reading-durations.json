@@ -1,3 +1,20 @@
 {
-    "index": 0.058
+    "changelog": 0.165,
+    "configuration/env_setup": 0.01,
+    "configuration/index": 0.176,
+    "configuration/server_startup": 0.018,
+    "contributing": 0.036,
+    "features/application_features": 0.009,
+    "features/dev_test_features": 0.02,
+    "features/django_debug_toolbar": 0.022,
+    "features/index": 0.012,
+    "features/package_index": 0.075,
+    "features/run_command_features": 0.035,
+    "index": 0.02,
+    "installation/docker_installation": 0.012,
+    "installation/index": 0.008,
+    "installation/local_installation": 0.009,
+    "license": 0.042,
+    "testing/create_new_users": 0.005,
+    "testing/index": 0.017
 }

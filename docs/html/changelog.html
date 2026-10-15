@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Contributing" href="contributing.html"><link rel="prev" title="pixshare" href="index.html">
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Contributing" href="contributing.html"><link rel="prev" title="Create new users" href="testing/create_new_users.html">
         <link rel="prefetch" href="_static/django_24.png" as="image">
 
     <link rel="shortcut icon" href="_static/django_24.png"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
@@ -194,8 +194,36 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+  <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="installation/index.html">Installation</a><input aria-label="Toggle navigation of Installation" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation/local_installation.html">Local Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation/docker_installation.html">Docker Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="configuration/index.html">Configuration</a><input aria-label="Toggle navigation of Configuration" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuration/env_setup.html">Environment Variable Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration/server_startup.html">Starting the Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="features/index.html">Features</a><input aria-label="Toggle navigation of Features" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="features/application_features.html">Application features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/dev_test_features.html">Dev &amp; Testing Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/run_command_features.html">The run command script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/django_debug_toolbar.html">django-debug-toolbar configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features/package_index.html">Package Index</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Testing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="testing/index.html">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing/index.html#running-the-tests">Running the Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing/create_new_users.html">Create new users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="features/package_index.html">Package Index</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
@@ -246,6 +274,22 @@
 the changelog. DO NOT commit any changes to this file.</p>
 <p>Backward incompatible (breaking) changes should only be introduced in major versions
 with advance notice in the <strong>Deprecations</strong> section of releases.</p>
+<section id="pixshare-0-2-8-2026-10-15">
+<h2>pixshare 0.2.8 (2026-10-15)<a class="headerlink" href="#pixshare-0-2-8-2026-10-15" title="Link to this heading">¶</a></h2>
+<section id="security-updated">
+<h3>Security updated<a class="headerlink" href="#security-updated" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/353">#353</a>): Update Django to 6.1.2</p></li>
+</ul>
+</section>
+<section id="contributor-facing-changes">
+<h3>Contributor-facing changes<a class="headerlink" href="#contributor-facing-changes" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/352">#352</a>): Update testing for Python 3.14.8, 3.13.16, 3.12.15</p></li>
+<li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/352">#352</a>): Update djlint to 1.46.4</p></li>
+</ul>
+</section>
+</section>
 <section id="pixshare-0-2-7-2026-09-30">
 <h2>pixshare 0.2.7 (2026-09-30)<a class="headerlink" href="#pixshare-0-2-7-2026-09-30" title="Link to this heading">¶</a></h2>
 <section id="improved-documentation">
@@ -257,8 +301,8 @@ with advance notice in the <strong>Deprecations</strong> section of releases.</p
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/300">#300</a>): Add myst-parser dependency</p></li>
 </ul>
 </section>
-<section id="contributor-facing-changes">
-<h3>Contributor-facing changes<a class="headerlink" href="#contributor-facing-changes" title="Link to this heading">¶</a></h3>
+<section id="id9">
+<h3>Contributor-facing changes<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/300">#300</a>): Update djlint to 1.46.2</p></li>
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/300">#300</a>): Update werkzeug to 3.1.9</p></li>
@@ -269,8 +313,8 @@ with advance notice in the <strong>Deprecations</strong> section of releases.</p
 </section>
 <section id="pixshare-0-2-6-2026-09-09">
 <h2>pixshare 0.2.6 (2026-09-09)<a class="headerlink" href="#pixshare-0-2-6-2026-09-09" title="Link to this heading">¶</a></h2>
-<section id="id10">
-<h3>Contributor-facing changes<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<section id="id14">
+<h3>Contributor-facing changes<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/338">#338</a>): Initial zizmor remediation. Pin GitHub actions to hashes.</p></li>
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/341">#341</a>): Update nox to 2026.8.17</p></li>
@@ -294,14 +338,14 @@ with advance notice in the <strong>Deprecations</strong> section of releases.</p
 </section>
 <section id="pixshare-0-2-5-2026-08-20">
 <h2>pixshare 0.2.5 (2026-08-20)<a class="headerlink" href="#pixshare-0-2-5-2026-08-20" title="Link to this heading">¶</a></h2>
-<section id="id23">
-<h3>Improved documentation<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h3>
+<section id="id27">
+<h3>Improved documentation<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/619">#619</a>): Add towncrier 25.8.0.</p></li>
 </ul>
 </section>
-<section id="id25">
-<h3>New features<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h3>
+<section id="id29">
+<h3>New features<a class="headerlink" href="#id29" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/642">#642</a>): Upgrade to Django 6.0.8</p></li>
 </ul>
@@ -309,8 +353,8 @@ with advance notice in the <strong>Deprecations</strong> section of releases.</p
 </section>
 <section id="pixshare-0-2-4-2026-07-31">
 <h2>pixshare 0.2.4 (2026-07-31)<a class="headerlink" href="#pixshare-0-2-4-2026-07-31" title="Link to this heading">¶</a></h2>
-<section id="id27">
-<h3>Contributor-facing changes<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h3>
+<section id="id31">
+<h3>Contributor-facing changes<a class="headerlink" href="#id31" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>: Add Python 3.14 support.</p></li>
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/333">#333</a>): Update with Python 3.14.6 &amp; 3.13.14.</p></li>
@@ -323,8 +367,8 @@ with advance notice in the <strong>Deprecations</strong> section of releases.</p
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/329">#329</a>): Drop support for Python 3.11.</p></li>
 </ul>
 </section>
-<section id="id31">
-<h3>New features<a class="headerlink" href="#id31" title="Link to this heading">¶</a></h3>
+<section id="id35">
+<h3>New features<a class="headerlink" href="#id35" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/299">#299</a>): Upgrade Django to 6.0.7.</p></li>
 </ul>
@@ -332,32 +376,32 @@ with advance notice in the <strong>Deprecations</strong> section of releases.</p
 </section>
 <section id="pixshare-0-2-3-2025-04-25">
 <h2>pixshare 0.2.3 (2025-04-25)<a class="headerlink" href="#pixshare-0-2-3-2025-04-25" title="Link to this heading">¶</a></h2>
-<section id="id33">
-<h3>Contributor-facing changes<a class="headerlink" href="#id33" title="Link to this heading">¶</a></h3>
+<section id="id37">
+<h3>Contributor-facing changes<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/247">#247</a>): Update Poetry to 2.1.2.</p></li>
 </ul>
 </section>
-<section id="id35">
-<h3>Deprecations (removal in next major release)<a class="headerlink" href="#id35" title="Link to this heading">¶</a></h3>
+<section id="id39">
+<h3>Deprecations (removal in next major release)<a class="headerlink" href="#id39" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/243">#243</a>): Drop Python 3.10 support.</p></li>
 </ul>
 </section>
-<section id="id37">
-<h3>Improved documentation<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h3>
+<section id="id41">
+<h3>Improved documentation<a class="headerlink" href="#id41" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/242">#242</a>): Update Sphinx to 8.2.3.</p></li>
 </ul>
 </section>
-<section id="id39">
-<h3>New features<a class="headerlink" href="#id39" title="Link to this heading">¶</a></h3>
+<section id="id43">
+<h3>New features<a class="headerlink" href="#id43" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/248">#248</a>): Upgrade Django to 5.2.</p></li>
 </ul>
 </section>
-<section id="security-updated">
-<h3>Security updated<a class="headerlink" href="#security-updated" title="Link to this heading">¶</a></h3>
+<section id="id45">
+<h3>Security updated<a class="headerlink" href="#id45" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/251">#251</a>): Replace safety package with pip-audit.</p></li>
 </ul>
@@ -365,15 +409,15 @@ with advance notice in the <strong>Deprecations</strong> section of releases.</p
 </section>
 <section id="pixshare-0-2-2-2025-01-20">
 <h2>pixshare 0.2.2 (2025-01-20)<a class="headerlink" href="#pixshare-0-2-2-2025-01-20" title="Link to this heading">¶</a></h2>
-<section id="id42">
-<h3>Contributor-facing changes<a class="headerlink" href="#id42" title="Link to this heading">¶</a></h3>
+<section id="id47">
+<h3>Contributor-facing changes<a class="headerlink" href="#id47" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/188">#188</a>): Add support for Python 3.13</p></li>
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/227">#227</a>): Re-build pyproject for Poetry 2.0.</p></li>
 </ul>
 </section>
-<section id="id45">
-<h3>New features<a class="headerlink" href="#id45" title="Link to this heading">¶</a></h3>
+<section id="id50">
+<h3>New features<a class="headerlink" href="#id50" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/219">#219</a>): Upgrade Django to 5.1.4</p></li>
 </ul>
@@ -381,27 +425,27 @@ with advance notice in the <strong>Deprecations</strong> section of releases.</p
 </section>
 <section id="pixshare-0-2-0-2023-12-30">
 <h2>pixshare 0.2.0 (2023-12-30)<a class="headerlink" href="#pixshare-0-2-0-2023-12-30" title="Link to this heading">¶</a></h2>
-<section id="id47">
-<h3>Contributor-facing changes<a class="headerlink" href="#id47" title="Link to this heading">¶</a></h3>
+<section id="id52">
+<h3>Contributor-facing changes<a class="headerlink" href="#id52" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/106">#106</a>): Update Python to 3.12.1.</p></li>
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/97">#97</a>): Upgrade Poetry to 1.7.1.</p></li>
 </ul>
 </section>
-<section id="id50">
-<h3>Deprecations (removal in next major release)<a class="headerlink" href="#id50" title="Link to this heading">¶</a></h3>
+<section id="id55">
+<h3>Deprecations (removal in next major release)<a class="headerlink" href="#id55" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/94">#94</a>): Drop support for Python 3.9.</p></li>
 </ul>
 </section>
-<section id="id52">
-<h3>Improved documentation<a class="headerlink" href="#id52" title="Link to this heading">¶</a></h3>
+<section id="id57">
+<h3>Improved documentation<a class="headerlink" href="#id57" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>: Update Sphinx theme to Furo</p></li>
 </ul>
 </section>
-<section id="id53">
-<h3>New features<a class="headerlink" href="#id53" title="Link to this heading">¶</a></h3>
+<section id="id58">
+<h3>New features<a class="headerlink" href="#id58" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>(<a class="reference external" href="https://github.com/kevinbowen777/pixshare/103">#103</a>): Upgrade to Django 5.0.</p></li>
 </ul>
@@ -409,14 +453,14 @@ with advance notice in the <strong>Deprecations</strong> section of releases.</p
 </section>
 <section id="pixshare-0-0-1-2023-06-20">
 <h2>pixshare 0.0.1 (2023-06-20)<a class="headerlink" href="#pixshare-0-0-1-2023-06-20" title="Link to this heading">¶</a></h2>
-<section id="id55">
-<h3>Contributor-facing changes<a class="headerlink" href="#id55" title="Link to this heading">¶</a></h3>
+<section id="id60">
+<h3>Contributor-facing changes<a class="headerlink" href="#id60" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>: Add support for Python 3.11</p></li>
 </ul>
 </section>
-<section id="id56">
-<h3>New features<a class="headerlink" href="#id56" title="Link to this heading">¶</a></h3>
+<section id="id61">
+<h3>New features<a class="headerlink" href="#id61" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>: Support Django 4.2.2</p></li>
 </ul>
@@ -444,14 +488,14 @@ with advance notice in the <strong>Deprecations</strong> section of releases.</p
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="index.html">
+          <a class="prev-page" href="testing/create_new_users.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Home</div>
+                <div class="title">Create new users</div>
                 
               </div>
             </a>
@@ -465,7 +509,7 @@ with advance notice in the <strong>Deprecations</strong> section of releases.</p
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Sep 30, 2026</div>
+              Last updated on Oct 14, 2026</div>
           </div>
           <div class="right-details">
             
@@ -487,50 +531,55 @@ with advance notice in the <strong>Deprecations</strong> section of releases.</p
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Changelog</a><ul>
-<li><a class="reference internal" href="#pixshare-0-2-7-2026-09-30">pixshare 0.2.7 (2026-09-30)</a><ul>
-<li><a class="reference internal" href="#improved-documentation">Improved documentation</a></li>
+<li><a class="reference internal" href="#pixshare-0-2-8-2026-10-15">pixshare 0.2.8 (2026-10-15)</a><ul>
+<li><a class="reference internal" href="#security-updated">Security updated</a></li>
 <li><a class="reference internal" href="#contributor-facing-changes">Contributor-facing changes</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#pixshare-0-2-7-2026-09-30">pixshare 0.2.7 (2026-09-30)</a><ul>
+<li><a class="reference internal" href="#improved-documentation">Improved documentation</a></li>
+<li><a class="reference internal" href="#id9">Contributor-facing changes</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#pixshare-0-2-6-2026-09-09">pixshare 0.2.6 (2026-09-09)</a><ul>
-<li><a class="reference internal" href="#id10">Contributor-facing changes</a></li>
+<li><a class="reference internal" href="#id14">Contributor-facing changes</a></li>
 <li><a class="reference internal" href="#new-features">New features</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#pixshare-0-2-5-2026-08-20">pixshare 0.2.5 (2026-08-20)</a><ul>
-<li><a class="reference internal" href="#id23">Improved documentation</a></li>
-<li><a class="reference internal" href="#id25">New features</a></li>
+<li><a class="reference internal" href="#id27">Improved documentation</a></li>
+<li><a class="reference internal" href="#id29">New features</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#pixshare-0-2-4-2026-07-31">pixshare 0.2.4 (2026-07-31)</a><ul>
-<li><a class="reference internal" href="#id27">Contributor-facing changes</a></li>
+<li><a class="reference internal" href="#id31">Contributor-facing changes</a></li>
 <li><a class="reference internal" href="#deprecations-removal-in-next-major-release">Deprecations (removal in next major release)</a></li>
-<li><a class="reference internal" href="#id31">New features</a></li>
+<li><a class="reference internal" href="#id35">New features</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#pixshare-0-2-3-2025-04-25">pixshare 0.2.3 (2025-04-25)</a><ul>
-<li><a class="reference internal" href="#id33">Contributor-facing changes</a></li>
-<li><a class="reference internal" href="#id35">Deprecations (removal in next major release)</a></li>
-<li><a class="reference internal" href="#id37">Improved documentation</a></li>
-<li><a class="reference internal" href="#id39">New features</a></li>
-<li><a class="reference internal" href="#security-updated">Security updated</a></li>
+<li><a class="reference internal" href="#id37">Contributor-facing changes</a></li>
+<li><a class="reference internal" href="#id39">Deprecations (removal in next major release)</a></li>
+<li><a class="reference internal" href="#id41">Improved documentation</a></li>
+<li><a class="reference internal" href="#id43">New features</a></li>
+<li><a class="reference internal" href="#id45">Security updated</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#pixshare-0-2-2-2025-01-20">pixshare 0.2.2 (2025-01-20)</a><ul>
-<li><a class="reference internal" href="#id42">Contributor-facing changes</a></li>
-<li><a class="reference internal" href="#id45">New features</a></li>
+<li><a class="reference internal" href="#id47">Contributor-facing changes</a></li>
+<li><a class="reference internal" href="#id50">New features</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#pixshare-0-2-0-2023-12-30">pixshare 0.2.0 (2023-12-30)</a><ul>
-<li><a class="reference internal" href="#id47">Contributor-facing changes</a></li>
-<li><a class="reference internal" href="#id50">Deprecations (removal in next major release)</a></li>
-<li><a class="reference internal" href="#id52">Improved documentation</a></li>
-<li><a class="reference internal" href="#id53">New features</a></li>
+<li><a class="reference internal" href="#id52">Contributor-facing changes</a></li>
+<li><a class="reference internal" href="#id55">Deprecations (removal in next major release)</a></li>
+<li><a class="reference internal" href="#id57">Improved documentation</a></li>
+<li><a class="reference internal" href="#id58">New features</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#pixshare-0-0-1-2023-06-20">pixshare 0.0.1 (2023-06-20)</a><ul>
-<li><a class="reference internal" href="#id55">Contributor-facing changes</a></li>
-<li><a class="reference internal" href="#id56">New features</a></li>
+<li><a class="reference internal" href="#id60">Contributor-facing changes</a></li>
+<li><a class="reference internal" href="#id61">New features</a></li>
 <li><a class="reference internal" href="#miscellaneous-internal-changes">Miscellaneous internal changes</a></li>
 </ul>
 </li>
@@ -545,7 +594,7 @@ with advance notice in the <strong>Deprecations</strong> section of releases.</p
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=58050c01"></script>
+</div><script src="_static/documentation_options.js?v=b01fafc3"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>

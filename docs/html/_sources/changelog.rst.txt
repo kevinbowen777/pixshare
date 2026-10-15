@@ -27,6 +27,22 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+pixshare 0.2.8 (2026-10-15)
+===========================
+
+Security updated
+----------------
+
+-  (`#353 <https://github.com/kevinbowen777/pixshare/353>`_): Update Django to 6.1.2
+
+
+Contributor-facing changes
+--------------------------
+
+-  (`#352 <https://github.com/kevinbowen777/pixshare/352>`_): Update testing for Python 3.14.8, 3.13.16, 3.12.15
+
+-  (`#352 <https://github.com/kevinbowen777/pixshare/352>`_): Update djlint to 1.46.4
+
 pixshare 0.2.7 (2026-09-30)
 ===========================
 
