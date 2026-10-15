@@ -1,15 +1,15 @@
 [project]
 name = "pixshare"
-version = "0.2.7"
+version = "0.2.8"
 description = "A Django web application for users to bookmark and share images"
 requires-python = ">=3.12.0"
 dependencies = [
-    "Django (==6.1.1)",
+    "Django (==6.1.2)",
     "environs[django] (==15.2.0)",
     "django-extensions (==4.1.0)",
     "psycopg[binary] (==3.3.6)",
     "Pillow (==12.3.0)",
-    "social-auth-app-django (==6.1.0)",
+    "social-auth-app-django (==7.1.0)",
     "requests (==2.34.2)",
     "easy-thumbnails (==2.10.1)",
     "redis (==4.6.0)",
@@ -287,6 +287,12 @@ name = "Bug fixes"
 showcontent = true
 
 [[tool.towncrier.type]]
+# Stuff that affects security. e.g. updating packages,
+directory = "security"
+name = "Security updated"
+showcontent = true
+
+[[tool.towncrier.type]]
 # Notable updates to the documentation structure or build process.
 directory = "doc"
 name = "Improved documentation"
@@ -297,12 +303,6 @@ showcontent = true
 # building the docs, setting up the development environment.
 directory = "contrib"
 name = "Contributor-facing changes"
-showcontent = true
-
-[[tool.towncrier.type]]
-# Stuff that affects security. e.g. updating packages,
-directory = "security"
-name = "Security updated"
 showcontent = true
 
 [[tool.towncrier.type]]
