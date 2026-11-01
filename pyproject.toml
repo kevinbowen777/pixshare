@@ -1,6 +1,6 @@
 [project]
 name = "pixshare"
-version = "0.2.8"
+version = "0.2.9"
 description = "A Django web application for users to bookmark and share images"
 requires-python = ">=3.12.0"
 dependencies = [
@@ -8,8 +8,8 @@ dependencies = [
     "environs[django] (==15.2.0)",
     "django-extensions (==4.1.0)",
     "psycopg[binary] (==3.3.6)",
-    "Pillow (==12.3.0)",
-    "social-auth-app-django (==7.1.0)",
+    "Pillow (==13.0.0)",
+    "social-auth-app-django (==7.2.0)",
     "requests (==2.34.2)",
     "easy-thumbnails (==2.10.1)",
     "redis (==4.6.0)",
@@ -29,7 +29,6 @@ classifiers = [
     "Framework :: Django",
     "Framework :: Django :: 6.1",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
@@ -56,7 +55,7 @@ python = ">=3.12.0, <3.15.0"
 django-debug-toolbar = ">=8.0, <9.0"
 pre-commit = ">=4.0, <5.0"
 ruff = ">=0.8, <1.0"
-nox = "2026.8.17"
+nox = "2026.10.20"
 pytest = ">=9.0, <10.0"
 pytest-cov = ">=7.0.0, <8.0"
 pytest-django = ">=4.5.2, <5.0.0"
@@ -172,6 +171,8 @@ addopts = "--reuse-db -p no:warnings"
 python_files = ["test_*.py"]
 filterwarnings = [
     # "ignore::django.utils.deprecation.RemovedInDjango51Warning",
+    "once::django.utils.deprecation.RemovedInDjango62Warning",
+    "once::django.utils.deprecation.RemovedInDjango70",
 ]
 
 [tool.ruff]
@@ -189,12 +190,11 @@ target-version = "py314"
 # Exclude a variety of commonly ignored directories.
 exclude = [
     ".git",
-    # ".mypy_cache",
-    # ".nox",
-    # ".pytest_cache",
-    # ".ruff_cache",
-    # "__pycache__",
-    # "__pypackages__",
+    ".nox",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".rumdl_cache",
+    "__pycache__",
     "htmlcov",
     "migrations",
     "images",
@@ -203,7 +203,16 @@ exclude = [
 ]
 
 [tool.ruff.lint]
-select = []
+# select = [] See https://docs.astral.sh/ruff/default-rules/ for full listing.
+extend-select = [
+    "DJ",       # flake8-django: Django-specific bugs
+    "E",        # pycodestyle errors
+    "F",        # Pyflakes
+    "W",        # pycodestyle warnings
+    "I",        # isort
+    "UP",       # pyupgrade
+    "B",        # flake8-bugbear
+]
 
 ignore = [
     "line-too-long",    # line too long ({width} > {limit} characters) [E501]
@@ -214,18 +223,17 @@ ignore = [
 ]
 
 # Allow autofix for all enabled rules (when `--fix`) is provided.
-fixable = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
+fixable = ["ALL"]
 unfixable = []
 
 # Allow unused variables when underscore-prefixed.
-dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+dummy-variable-rgx = "^(_+|(_+[\\p{XID_Continue}]*[\\p{XID_Continue}--_]+?))$"
 
 [tool.ruff.lint.per-file-ignores]
-# "accounts/tests/factories.py" = ["BLK100"] (Not supported)
-# "accounts/tests/*" = ["BLK100"] (Not supported)
-"account/tests/*" = ["S101", "S106"]
-"actions/tests/*" = ["S101", "S106"]
-"config/test.py" = ["S101", "S106"]
+"**/migrations/*.py" = ["E501", "RUF012"]
+"**/settings.py" = ["E501", "F403", "F405"]
+"**/tests.py" = ["S101"]
+"**/test*.py" = ["S101"]
 "docs/source/conf.py" = ["A001"]
 
 [tool.ruff.lint.mccabe]
