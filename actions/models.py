@@ -1,3 +1,5 @@
+from typing import ClassVar
+
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 from django.db import models
@@ -22,11 +24,11 @@ class Action(models.Model):
     target = GenericForeignKey("target_ct", "target_id")
 
     class Meta:
-        indexes = [
+        indexes: ClassVar[list] = [
             models.Index(fields=["-created"]),
             models.Index(fields=["target_ct", "target_id"]),
         ]
-        ordering = ["-created"]
+        ordering: ClassVar[list[str]] = ["-created"]
 
     def __str__(self):
         pass

@@ -4,7 +4,7 @@ from pathlib import Path
 
 from django.urls import reverse_lazy
 
-# import socket  # noqa: E402 # Comment out if not using debug_toolbar
+# import socket
 from environs import Env
 
 env = Env()

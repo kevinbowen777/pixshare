@@ -27,6 +27,36 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+pixshare 0.2.9 (2026-11-01)
+===========================
+
+Security updated
+----------------
+
+-  (`#355 <https://github.com/kevinbowen777/pixshare/355>`_): Update .python-version with 3.14.10, 3.13.18, 3.12.16
+
+-  (`#355 <https://github.com/kevinbowen777/pixshare/355>`_): Update certifi to 2026.10.23
+
+-  (`#355 <https://github.com/kevinbowen777/pixshare/355>`_): Update pip to 26.2.2
+
+-  (`#355 <https://github.com/kevinbowen777/pixshare/355>`_): Update pillow to 13.0.0
+
+
+Improved documentation
+----------------------
+
+-  (`#355 <https://github.com/kevinbowen777/pixshare/355>`_): Remove legacy license classifier
+
+
+Contributor-facing changes
+--------------------------
+
+-  (`#355 <https://github.com/kevinbowen777/pixshare/355>`_): Update ruff rules & fix reported errors
+
+-  (`#355 <https://github.com/kevinbowen777/pixshare/355>`_): Update nox to 2026.10.20
+
+-  (`#355 <https://github.com/kevinbowen777/pixshare/355>`_): Update djlint to 1.49.0
+
 pixshare 0.2.8 (2026-10-15)
 ===========================
 

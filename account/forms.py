@@ -1,3 +1,5 @@
+from typing import ClassVar
+
 from django import forms
 from django.contrib.auth.models import User
 
@@ -15,7 +17,7 @@ class UserRegistrationForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ["username", "first_name", "email"]
+        fields: ClassVar[list[str]] = ["username", "first_name", "email"]
 
     def clean_password2(self):
         cd = self.cleaned_data
@@ -33,7 +35,7 @@ class UserRegistrationForm(forms.ModelForm):
 class UserEditForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ["first_name", "last_name", "email"]
+        fields: ClassVar[list[str]] = ["first_name", "last_name", "email"]
 
     def clean_email(self):
         data = self.cleaned_data["email"]
@@ -46,4 +48,4 @@ class UserEditForm(forms.ModelForm):
 class ProfileEditForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ["date_of_birth", "photo"]
+        fields: ClassVar[list[str]] = ["date_of_birth", "photo"]
