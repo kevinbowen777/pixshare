@@ -27,6 +27,28 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+pixshare 0.2.10 (2026-11-13)
+============================
+
+Security updated
+----------------
+
+-  (`#357 <https://github.com/kevinbowen777/pixshare/357>`_): Update pip to 26.3
+
+-  (`#357 <https://github.com/kevinbowen777/pixshare/357>`_): Update psycopg to 3.3.9
+
+-  (`#357 <https://github.com/kevinbowen777/pixshare/357>`_): Update Django to 6.1.3
+
+
+Contributor-facing changes
+--------------------------
+
+-  (`#357 <https://github.com/kevinbowen777/pixshare/357>`_): Update djlint to 1.50.0
+
+-  (`#357 <https://github.com/kevinbowen777/pixshare/357>`_): Update coverage to 7.17.2
+
+-  (`#357 <https://github.com/kevinbowen777/pixshare/357>`_): Update myst-parser to 5.2.0
+
 pixshare 0.2.9 (2026-11-01)
 ===========================
 
